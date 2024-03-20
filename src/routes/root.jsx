@@ -1,19 +1,21 @@
-import { Link } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 // import { getBooks } from "../books"
-import { BOOKS } from "../components/bookObjects.js";
+// import { BOOKS } from "../components/bookObjects.js";
+import { getBooks } from "../books.js"
 
-// export async function loader() {
-//     const books = await getBooks();
-//     return { books };
-//   }
+export async function loader() {
+    const books = await getBooks();
+    console.log("asdfasdf")
+    return { books };
+  }
 
 
 export default function Root() {
-    const books = []
+    const { books } = useLoaderData()
     
-    BOOKS.map((book) => (
-        books.push(book)
-        ))
+    // BOOKS.map((book) => (
+    //     books.push(book)
+    //     ))
 
     return (
         <>
@@ -29,14 +31,6 @@ export default function Root() {
                   <li key={book.id}>
                   <Link to={`books/${book.id}`}>
                       <img src={book.logo}></img>
-                    {/* {book.artist || book.year ? (
-                        <>
-                        {book.id} {book.year}
-                      </>
-                    ) : (
-                      <i>No Name</i>
-                    )}{" "}
-                    {book.favorite && <span>★</span>} */}
                   </Link>
                 </li>
               ))}
