@@ -3,7 +3,7 @@ import { getBook } from '../books'
 
 export async function loader({params}) {
     console.log({params})
-    const book = await getBook(params.id)
+    const book = await getBook(params.bookId)
     if (!book) {
       throw new Response("", {
         status: 404,
@@ -20,7 +20,7 @@ export default function Book() {
         <>
             <div id="book">
                 <h1>{book.year}</h1>
-                <h1>how to get dynamic data passed to here</h1>
+                <h1>{book.urlText}</h1>
                 <img src={book.coverImage} alt={book.artist}/>
             </div>
         </>

@@ -1,12 +1,15 @@
 import { Link, useLoaderData } from "react-router-dom"
 // import { getBooks } from "../books"
 // import { BOOKS } from "../components/bookObjects.js";
-import { getBooks } from "../books.js"
+import { getBooks, getLogos } from "../books.js"
 
 export async function loader() {
+    // const url = new URL(request.url);
     const books = await getBooks();
-    console.log("asdfasdf")
-    return { books };
+    // console.log("asdfasdf", books)
+    const logos = await getLogos()
+    console.log("books:", books, "logos:", logos)
+    return { books, logos };
   }
 
 
@@ -27,7 +30,7 @@ export default function Root() {
         <nav>
         {books.length ? (
             <ul>
-              {books.map((book) => (
+              {books.map((book) => ( 
                   <li key={book.id}>
                   <Link to={`books/${book.id}`}>
                       <img src={book.logo}></img>
