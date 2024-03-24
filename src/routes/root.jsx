@@ -12,9 +12,7 @@ export default function Root() {
   const { logos, books, inSituImages } = useLoaderData();
 
   //   const availableBooks = books.filter((book) => book.available);
-
   //   const booksNotYetAvailable = books.filter((book) => !book.available);
-
   //   const justLogos = booksNotYetAvailable.map(
   //     (notYetAvailable) => notYetAvailable.logo
   //   );
@@ -38,29 +36,22 @@ export default function Root() {
           ))}
         </ul>
       </nav>
-      <div>
-        <ul>
-          {/* {logos.map((logo) => (
-              <li key={logo} className="w-16 px-1 py-0.5">
-                <img src={logo}></img>
-              </li>
-            ))} */}
-        </ul>
-      </div>
-      <div>
-        {inSituImages.length ? (
-          <ul>
-            {inSituImages.map((inSituImage) => (
-              <li key={inSituImage} className="w-50 px-1 pb-1">
+      <div >
+      {/* <nav>
+          {inSituImages.map((inSituImage) => (
+            <div key={inSituImage} className="pb-1 px-1 w-2/6 display-inline">
                 <img src={inSituImage}></img>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>
-            <i>No inSituImages</i>
-          </p>
-        )}
+            </div>
+          ))}
+      </nav> */}
+        
+        <ul className="grid grid-rows-4 grid-flow-col gap-4 ">
+          {inSituImages.map((inSituImage) => (
+            <li key={inSituImage} >
+                <img src={inSituImage} className="row-span-2" ></img>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
