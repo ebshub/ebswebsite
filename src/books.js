@@ -1,30 +1,15 @@
 import { BOOKS } from "./components/bookObjects.js";
-// import localforage from "localforage";
-// import { matchSorter } from "match-sorter";
-// import sortBy from "sort-by";
+import { INSITUIMAGES } from "./components/inSituImages.js"
+import { LOGOS } from "./components/logoImages.js"
 
 export async function getLogos() {
-    let logos = []
-    // let books = [{}]
-    // BOOKS.map((book) => {
-    //     if (!('coverImage' in book)) logos.push(book.logo) 
-    //     else books.push(book)
-    //     })
-    BOOKS.map((book) => {
-        if (!('coverImage' in book)) logos.push(book.logo) 
-    })
-    
+    let logos = LOGOS
     return logos
 }
 
 export async function getBooks() {
-   let books = []
-
-   BOOKS.map((book) => {
-    if ('coverImage' in book) books.push(book)
-   })
-
-     return books;
+    let books = BOOKS
+    return books
 }
 
 export async function getBook(id) {
@@ -34,3 +19,7 @@ export async function getBook(id) {
     return book ?? null;
 }
 
+export async function getInSituImages() {
+    let inSituImages = INSITUIMAGES
+    return inSituImages
+}

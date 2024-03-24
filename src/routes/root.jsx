@@ -1,57 +1,67 @@
-import { Link, useLoaderData } from "react-router-dom"
-// import { getBooks } from "../books"
-// import { BOOKS } from "../components/bookObjects.js";
-import { getBooks, getLogos } from "../books.js"
+import { Link, useLoaderData } from "react-router-dom";
+import { getBooks, getInSituImages, getLogos } from "../books.js";
 
 export async function loader() {
-    // const url = new URL(request.url);
-    const books = await getBooks();
-    // console.log("asdfasdf", books)
-    const logos = await getLogos()
-    console.log("books:", books, "logos:", logos)
-    return { books, logos };
-  }
-
+  const books = await getBooks();
+  const inSituImages = await getInSituImages();
+  const logos = await getLogos();
+  return { books, inSituImages, logos };
+}
 
 export default function Root() {
-    const { books } = useLoaderData()
-    
-    // BOOKS.map((book) => (
-    //     books.push(book)
-    //     ))
+  const { logos, books, inSituImages } = useLoaderData();
 
-    return (
-        <>
-        <h1>sidebar react router books</h1>
-        <div>
-            <h2>this should be where books are loaded?</h2>
-        </div>
-       
-        <nav>
-        {books.length ? (
-            <ul>
-              {books.map((book) => ( 
-                  <li key={book.id}>
-                  <Link to={`books/${book.id}`}>
-                      <img src={book.logo}></img>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>
-              <i>No books</i>
-            </p>
-          )}
-        {/* <ul>
-            <li>
-              <Link to={`/books/1`}>isabelle</Link>
+  //   const availableBooks = books.filter((book) => book.available);
+
+  //   const booksNotYetAvailable = books.filter((book) => !book.available);
+
+  //   const justLogos = booksNotYetAvailable.map(
+  //     (notYetAvailable) => notYetAvailable.logo
+  //   );
+
+  return (
+    <>
+      <nav className="pt-3">
+        <ul>
+          {books.map((book) => (
+            <li key={book.id} className="px-1">
+              <Link to={`books/${book.id}`} className="flex ">
+                <img src={book.logo} className="h-5 w-14"></img>
+                <h1 className="px-1 ">{book.year}</h1>
+              </Link>
             </li>
-            <li>
-              <Link to={`/books/2`}>next book not made yet</Link>
+          ))}
+          {logos.map((logo) => (
+            <li key={logo} className="px-1 pb-1">
+              <img src={logo} className="w-14"></img>
             </li>
-          </ul> */}
-        </nav>
-        </>
-    )
+          ))}
+        </ul>
+      </nav>
+      <div>
+        <ul>
+          {/* {logos.map((logo) => (
+              <li key={logo} className="w-16 px-1 py-0.5">
+                <img src={logo}></img>
+              </li>
+            ))} */}
+        </ul>
+      </div>
+      <div>
+        {inSituImages.length ? (
+          <ul>
+            {inSituImages.map((inSituImage) => (
+              <li key={inSituImage} className="w-50 px-1 pb-1">
+                <img src={inSituImage}></img>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>
+            <i>No inSituImages</i>
+          </p>
+        )}
+      </div>
+    </>
+  );
 }
