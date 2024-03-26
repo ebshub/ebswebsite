@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { getBooks, getInSituImages, getLogos } from "../books.js";
+import Info from "../components/Info.jsx"
 
 export async function loader() {
   const books = await getBooks();
@@ -19,39 +20,30 @@ export default function Root() {
 
   return (
     <>
-      <nav className="pt-3">
-        <ul>
-          {books.map((book) => (
-            <li key={book.id} className="px-1">
-              <Link to={`books/${book.id}`} className="flex ">
-                <img src={book.logo} className="h-5 w-14"></img>
-                <h1 className="px-1 ">{book.year}</h1>
-              </Link>
-            </li>
-          ))}
-          {logos.map((logo) => (
-            <li key={logo} className="px-1 pb-1">
-              <img src={logo} className="w-14"></img>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div >
-      {/* <nav>
-          {inSituImages.map((inSituImage) => (
-            <div key={inSituImage} className="pb-1 px-1 w-2/6 display-inline">
-                <img src={inSituImage}></img>
+      <div className="pt-3 px-2">
+        {books.map((book) => (
+          <Link to={`books/${book.id}`} key={book.id} className="">
+            <div className="flex items-end px-1">
+              <img src={book.logo} className="w-12 pb-2"></img>
+              <h1 className="px-1.5 pb-0.5">{book.year}</h1>
             </div>
-          ))}
-      </nav> */}
-        
-        <ul className="grid grid-rows-4 grid-flow-col gap-4 ">
-          {inSituImages.map((inSituImage) => (
-            <li key={inSituImage} >
-                <img src={inSituImage} className="row-span-2" ></img>
-            </li>
-          ))}
-        </ul>
+          </Link>
+        ))}
+        {logos.map((logo) => (
+          <div key={logo} className="flex items-end px-1  ">
+            <img src={logo} className="w-12 pb-2"></img>
+          </div>
+        ))}
+      </div>
+      <div className="px-3 grid gap-3 sm:grid-cols-12">
+        {inSituImages.map((inSituImage) => (
+          <div key={inSituImage} className="sm:col-span-6 min-h-[100px]">
+            <img src={inSituImage}></img>
+          </div>
+        ))}
+      </div>
+      <div className="px-3">
+        <Info />
       </div>
     </>
   );

@@ -13,9 +13,10 @@ import logo1 from "/assets/logos/Fiery_Color_021.png";
 // import logo13 from "/assets/logos/Fiery_Color_008 copy.png";
 
 import coverImage1 from "/assets/coverImages/IMG_9389 copy.jpg";
-// import coverImage2 from "/assets/coverImages/IMG_9393 copy.jpg";
-// import coverImage3 from "/assets/coverImages/IMG_9409 copy.jpg";
-
+import coverImage2 from "/assets/coverImages/IMG_9393 copy.jpg";
+import coverImage3 from "/assets/coverImages/IMG_9409 copy.jpg";
+import video1 from "/assets/coverImages/IMG_9401.mp4"
+import video2 from "/assets/coverImages/IMG_9408.mp4"
 
 export const BOOKS = [
     {
@@ -37,7 +38,30 @@ export const BOOKS = [
         bio: "Isabelle CORNARO - born 1974, France. Lives and works in Paris and Geneva - her practice includes video, installation, sculpture, painting, scenography as well as edition and artist's books...; she explores the relationship between the object and its image, the original and its copy and the interface between art and art history.",
         artistsWebsite: "https://isabellecornaro.com/",
         logo: logo1,
-        coverImage: coverImage1,
+        images: [
+          {
+            id: 1,
+            imgFile: coverImage1
+          }, 
+          {
+            id: 2,
+            imgFile: coverImage2
+          }, 
+          {
+            id: 3,
+            imgFile: coverImage3
+          },     
+        ],
+        media: [
+          {
+            id: 1,
+            videoFile: video1,
+          },
+          {
+            id: 2,
+            videoFile: video2
+          }
+        ],
         available: true,
       },
       // {
