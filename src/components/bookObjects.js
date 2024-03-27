@@ -1,4 +1,4 @@
-import logo1 from "/assets/logos/Fiery_Color_021.png";
+import logo1 from "/assets/logosBig/Fiery_Color_021.png";
 // import logo2 from "/assets/logos/Fiery_Color_010_ok copy.png";
 // import logo3 from "/assets/logos/Fiery_Color_011 copy.png";
 // import logo4 from "/assets/logos/Fiery_Color_012 copy.png";
@@ -32,7 +32,7 @@ export const BOOKS = [
         edition: "First",
         editionAmount: 220,
         attribution:
-          "Published on occasion of the exhibition MOTHER, LAWS, MATTER, from March 21 to June 29, 2024, at Fondazione Giuliani, Roma by e.bs editionsbierisusanne CH-3012 Bern (main office) and IT-06031 Bevagna (PG) (additional office/non-profi t project space Via Santa Maria 7) 2024. Realized by La Tipografica Bevagna.",
+          "Published on occasion of the exhibition MOTHER, LAWS, MATTER, from March 21 to June 29, 2024, at Fondazione Giuliani, Roma by e.bs editionsbierisusanne CH-3012 Bern (main office) and IT-06031 Bevagna (PG) (additional office/non-profit project space Via Santa Maria 7) 2024. Realized by La Tipografica Bevagna.",
         notes:
           "No text or explanation, so-called BAT - reproduced and overworked reproductions - combine to form a cinematic outline through spray paintings and their multiple enlargements into infinity.",
         bio: "Isabelle CORNARO - born 1974, France. Lives and works in Paris and Geneva - her practice includes video, installation, sculpture, painting, scenography as well as edition and artist's books...; she explores the relationship between the object and its image, the original and its copy and the interface between art and art history.",

@@ -1,11 +1,11 @@
 import { BOOKS } from "./components/bookObjects.js";
 import { INSITUIMAGES } from "./components/inSituImages.js"
-import { LOGOS } from "./components/logoImages.js"
+// import { LOGOS } from "./components/logoImages.js"
 
-export async function getLogos() {
-    let logos = LOGOS
-    return logos
-}
+// export async function getLogos() {
+//     let logos = LOGOS
+//     return logos
+// }
 
 export async function getBooks() {
     let books = BOOKS

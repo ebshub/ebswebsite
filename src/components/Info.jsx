@@ -1,6 +1,6 @@
 const Info = () => {
   return (
-    <div className="px-2 py-2">
+    <div id="info" className="px-2 py-2 text-xs">
       <div className="py-2">
         <h1>e.bs</h1>
         <p>
@@ -13,29 +13,29 @@ const Info = () => {
       <div className="py-2">
         <h1>e.bs </h1>
         <p>
-            editionsbierisusanne-ebs ist ein Künstlerbücherverlag mit 
-            Hauptsitz in Bern/CH und Zweitsitz in Bevagna/IT. 
-            ebs-Künstlerpublikationen entstehen in Zusammenarbeit mit 
-            KünsterInnen und Institutionen nach ihren eigenen Regeln.
+          editionsbierisusanne-ebs ist ein Künstlerbücherverlag mit Hauptsitz in
+          Bern/CH und Zweitsitz in Bevagna/IT. ebs-Künstlerpublikationen
+          entstehen in Zusammenarbeit mit KünsterInnen und Institutionen nach
+          ihren eigenen Regeln.
         </p>
       </div>
       <div className="py-2">
         <h1>e.bs </h1>
         <p>
-           editionsbierisusanne-ebs è una casa editrice di libri d'artista 
-           con sede a Berna/CH e un secondo ufficio a Bevagna/IT. Le 
-           pubblicazioni d'artista di ebs sono prodotte in collaborazione 
-           con artisti e istituzioni secondo le loro regole.
+          editionsbierisusanne-ebs è una casa editrice di libri d'artista con
+          sede a Berna/CH e un secondo ufficio a Bevagna/IT. Le pubblicazioni
+          d'artista di ebs sono prodotte in collaborazione con artisti e
+          istituzioni secondo le loro regole.
         </p>
       </div>
       <div className="py-2">
         <h1>e.bs </h1>
         <p>
-           editionsbierisusanne-ebs est une maison d'édition de livres 
-           d'artistes dont le siège principal est à Berne/CH et le 
-           siège secondaire à Bevagna/IT. Les publications d'artistes 
-           ebs sont réalisées en collaboration avec des artistes et des 
-           institutions selon leurs propres règles.
+          editionsbierisusanne-ebs est une maison d'édition de livres d'artistes
+          dont le siège principal est à Berne/CH et le siège secondaire à
+          Bevagna/IT. Les publications d'artistes ebs sont réalisées en
+          collaboration avec des artistes et des institutions selon leurs
+          propres règles.
         </p>
       </div>
       <div className="py-2">
@@ -50,23 +50,23 @@ const Info = () => {
       </div>
       <div className="py-2">
         <p>
-            e.bs editionsbierisusanne is a sole proprietorship without 
-            VAT liability in Switzerland, based in Bern/CH. 
+          e.bs editionsbierisusanne is a sole proprietorship without VAT
+          liability in Switzerland, based in Bern/CH.
         </p>
         <p>
-        editionsbierisusanne-ebs Künstlerbücherverlag ist ein 
-        Einzelunternehmen ohne Mehrwersteuerpflicht in der Schweiz 
-        mit Sitz in Bern/CH.
+          editionsbierisusanne-ebs Künstlerbücherverlag ist ein
+          Einzelunternehmen ohne Mehrwersteuerpflicht in der Schweiz mit Sitz in
+          Bern/CH.
         </p>
         <p>
-        editionsbierisusanne-ebs, casa editrice di libri d'artista è 
-        una ditta individuale senza responsabilità per l'IVA in 
-        Svizzera con sede a Berna/CH  
+          editionsbierisusanne-ebs, casa editrice di libri d'artista è una ditta
+          individuale senza responsabilità per l'IVA in Svizzera con sede a
+          Berna/CH
         </p>
         <p>
-        editionsbierisusanne-ebs Künstlerbücherverlag est une entreprise 
-        individuelle non assujettie à la TVA en Suisse, dont le 
-        siège est à Berne/CH.
+          editionsbierisusanne-ebs Künstlerbücherverlag est une entreprise
+          individuelle non assujettie à la TVA en Suisse, dont le siège est à
+          Berne/CH.
         </p>
       </div>
     </div>
