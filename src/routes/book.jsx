@@ -47,18 +47,18 @@ export default function Book() {
           {/* <iframe src={slides[3].file} autoPlay className="w-full object-cover"/> */}
           {/* <video src={slides[3].file} autoPlay className="w-full object-cover" /> */}
         </div>
-        <div>
+        <div className="bg-slate-100">
           <div style={containerStyles}>
             <ImageSlider pictures={pictures} videos={videos} />
           </div>
         </div>
         {/* <img src={picUrl} /> */}
-        <div>
-          {pictures.map((picture) => (
+        <div >
+          {/* {pictures.map((picture) => (
             <div key={picture.id} className=" ">
-              {/* <img src={picture.imgFile} /> */}
+              <img src={picture.imgFile} />
             </div>
-          ))}
+          ))} */}
           <div className="m-4 grid grid-cols-1 sm:grid-cols-12 gap-4 text-sm">
             <div className="sm:col-span-8">
               <p>{book.attribution}</p>
@@ -90,7 +90,7 @@ export default function Book() {
               </h3>
               <h3>Price: <b>{book.price}</b></h3>
               <h3>Edition: <b>{book.edition}</b>; {book.editionAmount} copies</h3>
-              <br />
+             
               <h3>Artist's Website: <a href="https://isabellecornaro.com/"><b>isabellecornaro.com</b></a></h3>
             </div>
           </div>

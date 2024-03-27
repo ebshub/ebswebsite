@@ -46,7 +46,7 @@ const Info = () => {
         <p>+41 (0)79 271 59 35</p>
         <p>susannebieri@gmail.com</p>
         <p>editionsbierisusanne-ebs.ch</p>
-        <p>Instagram: edededebs</p>
+        <p>Instagram: <a href="https://www.instagram.com/edededebs/"><b>edededebs</b></a></p>
       </div>
       <div className="py-2">
         <p>
