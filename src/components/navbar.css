@@ -1,0 +1,40 @@
+.navbar {
+  /* display: none; */
+  /* width: 100%;
+    height: 80px; */
+  /* background-color: rgb(19, 19, 19); */
+  /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+}
+
+.links {
+  /* margin-right: 50px;
+    display: flex;
+    align-items: center; */
+  position: relative;
+}
+
+/* display: none; */
+
+.links a {
+  text-decoration: none;
+  color: black;
+  /* margin-left: 20px; */
+  /* font-size: 15px; */
+}
+
+.links .cartIcon {
+  color: black;
+  position: absolute;
+  margin-right: 3px;
+  top: 2px;
+  right: 2px;
+  /* display: none !important; */
+}
+
+.links .shopIcon { 
+  color: black;
+  margin-left: 4px;
+  /* display: none; */
+}
