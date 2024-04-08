@@ -27,7 +27,7 @@ export const BOOKS = [
         year: 2024,
         pages: 44,
         size: "24 x 30 cm",
-        binding: "staplebound",
+        binding: "Staplebound",
         price: "EU 30.-",
         edition: "First",
         editionAmount: 220,

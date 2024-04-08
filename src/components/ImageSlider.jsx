@@ -4,7 +4,7 @@ import { useState } from "react";
 const slideStyles = {
   width: "100%",
   height: "100%",
-//   borderRadius: "10px",
+  //   borderRadius: "10px",
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -47,50 +47,47 @@ const sliderStyles = {
 //   fontSize: "20px",
 // };
 
-
 const ImageSlider = ({ pictures, videos }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-    
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? pictures.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
-  
   const goToNext = () => {
     const isLastSlide = currentIndex === pictures.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
 
-//   const goToSlide = (slideIndex) => {
-//     setCurrentIndex(slideIndex);
-//   };
+  //   const goToSlide = (slideIndex) => {
+  //     setCurrentIndex(slideIndex);
+  //   };
 
-//   const slideStylesWidthBackground = {
-//     ...slideStyles,
-//     backgroundImage: `${pictures[currentIndex].imgFile}`,
-//   };
+  //   const slideStylesWidthBackground = {
+  //     ...slideStyles,
+  //     backgroundImage: `${pictures[currentIndex].imgFile}`,
+  //   };
 
-//   const slideBackground = {
-//     backgroundImage: "url(/assets/coverImages/IMG_9389 copy.jpg)",
-//   };
+  //   const slideBackground = {
+  //     backgroundImage: "url(/assets/coverImages/IMG_9389 copy.jpg)",
+  //   };
 
-  
   // console.log(pictures)
-//   console.log("slideStylesWidthBackground:",slideStylesWidthBackground)
+  //   console.log("slideStylesWidthBackground:",slideStylesWidthBackground)
   return (
-      <div style={sliderStyles}>
-        <div>
-            <div onClick={goToPrevious} style={leftArrowStyles}>
-                ❰
-            </div>
-            <div onClick={goToNext} style={rightArrowStyles}>
-                ❱
-            </div>
+    <div style={sliderStyles}>
+      <div>
+        <div onClick={goToPrevious} style={leftArrowStyles}>
+          ❰
         </div>
-        {/* <video src={videos[currentIndex].videoFile} autoPlay className="w-full object-cover"></video> */}
+        <div onClick={goToNext} style={rightArrowStyles}>
+          ❱
+        </div>
+      </div>
+      {/* <video src={videos[currentIndex].videoFile} autoPlay className="w-full object-cover"></video> */}
       <img src={pictures[currentIndex].imgFile} alt="" />
       {/* <div style={slideStylesWidthBackground}></div> */}
       {/* <div style={dotsContainerStyles}>

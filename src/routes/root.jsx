@@ -14,8 +14,7 @@ import logo10 from "/assets/logos/Fiery_Color_018 copy 2.png";
 import logo11 from "/assets/logos/Fiery_Color_019 copy 2.png";
 import logo12 from "/assets/logos/Fiery_Color_020 copy 2.png";
 import logo13 from "/assets/logos/Fiery_Color_021 copy 2.png";
-
-
+import dodecahedron from "/assets/IMG_7556 copy.jpeg";
 
 export async function loader() {
   const books = await getBooks();
@@ -36,7 +35,7 @@ export default function Root() {
 
   return (
     <>
-      <div className="pt-2 px-2">
+      <div className="pt-3 pb-2 px-2.5">
         {books.map((book) => (
           <Link to={`books/${book.id}`} key={book.id} className="">
             <div className="flex pb-[0.5px] items-baseline">
@@ -45,51 +44,71 @@ export default function Root() {
             </div>
           </Link>
         ))}
-        <div className="flex items-baseline ">
-          <img src={logo2} alt="" className="w-10 pb-1" />
+        <div className="flex pb-[0.5px] items-baseline ">
+          <img src={logo2} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo3} alt="" className="w-10 pb-1" />
+          <img src={logo3} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo4} alt="" className="w-10 pb-1" />
+          <img src={logo4} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo5} alt="" className="w-10 pb-1" />
+          <img src={logo5} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo6} alt="" className="w-10 pb-1" />
+          <img src={logo6} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo7} alt="" className="w-10 pb-1" />
+          <img src={logo7} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo8} alt="" className="w-10 pb-1" />
+          <img src={logo8} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo9} alt="" className="w-10 pb-1" />
+          <img src={logo9} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo10} alt="" className="w-10 pb-1" />
+          <img src={logo10} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo11} alt="" className="w-10 pb-1" />
+          <img src={logo11} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo12} alt="" className="w-10 pb-1" />
+          <img src={logo12} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         <div className="flex items-baseline ">
-          <img src={logo13} alt="" className="w-10 pb-1" />
+          <img src={logo13} alt="" className="w-10" />
+          <h1 className="px-0.5 text-xs">tbd</h1>
         </div>
         {/* {logos.map((logo) => (
           <div key={logo} className="flex items-baseline px-0.5  ">
-            <img src={logo} className="w-10 pb-1 "></img>
+            <img src={logo} className="w-10 "></img>
             <h1 className="px-1 text-xs"></h1>
           </div>
         ))} */}
       </div>
-      <div className="px-2 py-1">
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2">
+      <hr />
+      <div className="px-2 py-2">
+        <h1 className=" font-bold">e.bs</h1>
+        <p className="text-xs pb-2">
+          editionsbierisusanne-ebs is an artists' book publisher with
+          headquarters in Bern/CH and a second office in Bevagna/IT. ebs
+          artists' publications are produced in collaboration with artists and
+          institutions according to their own rules.
+        </p>
+        <div className="grid sm:grid-cols-1  lg:grid-cols-2 2xl:grid-cols-3 gap-2">
           {inSituImages.map((inSituImage) => (
             <div key={inSituImage} className="">
               <img src={inSituImage}></img>
@@ -113,6 +132,9 @@ export default function Root() {
       </div> */}
       <div className="px-3">
         <Info />
+      </div>
+      <div className="flex justify-center">
+        <img src={dodecahedron} alt="" className="w-64 pb-5" />
       </div>
     </>
   );

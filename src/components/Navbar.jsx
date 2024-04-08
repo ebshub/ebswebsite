@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   //onClick={()=>{toggle_mode()}}
   return (
-    <div className="navbar ">
+    <div className="navbar py-1">
       <div className="links">
         <Link className="shopIcon" to="/">
           Home
