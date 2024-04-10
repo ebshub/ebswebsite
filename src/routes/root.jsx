@@ -46,7 +46,7 @@ export default function Root() {
         ))}
         <div className="flex pb-[0.5px] items-baseline ">
           <img src={logo2} alt="" className="w-10" />
-          <h1 className="px-0.5 text-xs">tbd</h1>
+          <h1 className="px-0.5 text-xs">tbd TEST</h1>
         </div>
         <div className="flex items-baseline ">
           <img src={logo3} alt="" className="w-10" />
